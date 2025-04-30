@@ -10,5 +10,4 @@ import { ManyPerson } from 'src/app/shared/interfaces/eperson';
 })
 export class SimpleDatatableExampleComponent {
   manyPerson = ManyPerson;
-
 }

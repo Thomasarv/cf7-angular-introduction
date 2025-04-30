@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=https://Thomasarv.github.io/cf7-angular-introduction/"
+    "deploy": "ng deploy --base-href=https://mkarampatsis.github.io/cf7-angular-introduction/"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +22,6 @@
     "@angular/router": "^19.2.0",
     "bootstrap": "^5.3.5",
     "lodash-es": "^4.17.21",
-    "prettier": "^3.5.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -40,6 +39,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^3.5.3",
     "typescript": "~5.7.2"
   }
 }

@@ -1,6 +1,6 @@
- import { Component } from '@angular/core';
- import { Person } from 'src/app/shared/interfaces/person';
-import { PersonTableComponent } from "../person-table/person-table.component";
+import { Component } from '@angular/core';
+import { Person } from 'src/app/shared/interfaces/person';
+import { PersonTableComponent } from '../person-table/person-table.component';
 
 @Component({
   selector: 'app-for-directive-example',
@@ -9,18 +9,7 @@ import { PersonTableComponent } from "../person-table/person-table.component";
   styleUrl: './for-directive-example.component.css'
 })
 export class ForDirectiveExampleComponent {
-  
-
-
-  person1: Person = {
-    givenName: "John",
-    surName: "Doe",
-    age: 32,
-    email: "john@example.com",
-    address:'New York, USA'
-   }
-  
-   users: Person[] = [
+  users: Person[] = [
     {
       "givenName": "Sawyer",
       "surName": "Whitney",

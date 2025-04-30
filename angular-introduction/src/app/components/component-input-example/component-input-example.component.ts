@@ -9,19 +9,19 @@ import { PersonTableComponent } from '../person-table/person-table.component';
   styleUrl: './component-input-example.component.css'
 })
 export class ComponentInputExampleComponent {
-    person0: Person = {
-           givenName: 'Cristodoulos',
-           surName: 'Fragkoudakis',
-           age:55,
-           email: 'chgraf@aueb.gr',
-           address: 'New York,USA'
-    }
+  person0: Person = {
+    givenName: 'Christodoulos',
+    surName: 'Fragkoudakis',
+    age: 55,
+    email: 'chfrag@aueb',
+    address: 'New York, Usa'
+  }
 
-    person1: Person = {
-      givenName: 'John',
-      surName: 'Doe',
-      age:45,
-      email: 'john@aueb.gr',
-      address: 'Athens, Greece'
-}
+  person1: Person = {
+    givenName: 'John',
+    surName: 'Doe',
+    age: 45,
+    email: 'john@aueb.gr',
+    address: 'Athens Greece'
+  }
 }

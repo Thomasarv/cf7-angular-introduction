@@ -1,9 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatButtonModule } from '@angular/material/button';
+import { MatButtonModule, } from '@angular/material/button';
 import { 
   AbstractControl,
+  FormArray,
   FormControl, 
   FormGroup, 
   ReactiveFormsModule, 
@@ -11,6 +12,8 @@ import {
 } from '@angular/forms';
 import { UserService } from 'src/app/shared/services/user.service';
 import { User } from 'src/app/shared/interfaces/user';
+import {  MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-user-registration',
@@ -18,7 +21,9 @@ import { User } from 'src/app/shared/interfaces/user';
     MatButtonModule, 
     MatFormFieldModule, 
     MatInputModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatIconModule
   ],
   templateUrl: './user-registration.component.html',
   styleUrl: './user-registration.component.css'
@@ -40,6 +45,12 @@ export class UserRegistrationComponent {
       area: new FormControl(''),
       road: new FormControl('')
     }),
+    phone: new FormArray([
+      new FormGroup({
+        number: new FormControl('', Validators.required),
+        type: new FormControl('', Validators.required)
+      })
+    ]),
     password: new FormControl('', [Validators.required, Validators.minLength(5)]),
     confirmPassword: new FormControl('', [Validators.required, Validators.minLength(5)])
   },
@@ -58,6 +69,20 @@ export class UserRegistrationComponent {
     }
     
     return null
+  }
+  phone = this.form.get('phone') as FormArray;
+
+  addPhoneNumber(){
+    this.phone.push(
+      new FormGroup({
+        number: new FormControl('', Validators.required),
+        type: new FormControl('',Validators.required)
+      })
+    )
+  }
+
+  removePhoneNumber(index: number){
+    this.phone.removeAt(index);
   }
 
   onSubmit(){
